@@ -16,6 +16,7 @@ var options = {
     ]
   })
 };
+
 var ch=' ';
 var a1=0;
 bot.onText(/\/start/, function (msg, match) {
