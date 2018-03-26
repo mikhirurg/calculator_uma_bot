@@ -1,0 +1,11 @@
+{
+  "name": "calkulator_app_uma",
+  "description": "Sum in web",
+  "version": "1.0.0",
+  "engines": {
+    "node": "8.9.4"
+  },
+  "dependencies":{
+  "node-telegram-bot-api": "^0.3"
+  }
+}
