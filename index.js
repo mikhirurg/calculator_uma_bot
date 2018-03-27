@@ -19,6 +19,7 @@ var options = {
 
 var ch=' ';
 var a1=0;
+var b=false;
 bot.onText(/\/start/, function (msg, match) {
 	bot.sendMessage(msg.chat.id,'Weclome to Calculator bot!');
   bot.sendMessage(msg.chat.id, '0', options);
@@ -47,10 +48,12 @@ const action = callbackQuery.data;
   if (action === '2') {
 	ch='+';
 	a1=parseInt(msg.text,10);
+	b=true;
   }
   if (action === '3') {
 	ch='-';
 	a1=parseInt(msg.text,10);
+	b=true;
   }
   if (action === '15') {
 	  if (ch === '+'){
@@ -58,6 +61,7 @@ const action = callbackQuery.data;
         bot.editMessageText(num.toString(), opts,options);
 	    a1=0;
         ch=' ';	
+		b=false;
 	  }
 	  if (ch === '-'){
 		var num=a1-parseInt(msg.text);   
@@ -65,6 +69,7 @@ const action = callbackQuery.data;
 		bot.editMessageText(num.toString(), opts,options);
 	    a1=0;
 	    ch=' ';
+		b=false;
 	  }
   }
   if (action === '4') {
@@ -75,63 +80,63 @@ const action = callbackQuery.data;
 	}
   }
   if (action === '5') {
-	if (msg.text=== '0' || msg.text=== a1.toString()) {
+	if (msg.text=== '0' || b) {
 	bot.editMessageText('8', opts,options);
 	} else{
 	bot.editMessageText(msg.text+'8', opts,options);
 	}
   }
   if (action === '6') {
-	if (msg.text=== '0' || msg.text=== a1.toString()) {
+	if (msg.text=== '0' || b) {
 	bot.editMessageText('9', opts,options);
 	} else{
 	bot.editMessageText(msg.text+'9', opts,options);
 	}
   }
   if (action === '7' ) {
-	if (msg.text=== '0' || msg.text=== a1.toString()) {
+	if (msg.text=== '0' || b) {
 	bot.editMessageText('4', opts,options);
 	} else{
 	bot.editMessageText(msg.text+'4', opts,options);
 	}
   }
   if (action === '8') {
-	if (msg.text=== '0' || msg.text=== a1.toString()) {
+	if (msg.text=== '0' || b) {
 	bot.editMessageText('5', opts,options);
 	} else{
 	bot.editMessageText(msg.text+'5', opts,options);
 	}
   }
   if (action === '9') {
-	if (msg.text=== '0' || msg.text=== a1.toString()) {
+	if (msg.text=== '0' || b) {
 	bot.editMessageText('6', opts,options);
 	} else{
 	bot.editMessageText(msg.text+'6', opts,options);
 	}
   }
   if (action === '10') {
-	if (msg.text=== '0' || msg.text=== a1.toString()) {
+	if (msg.text=== '0' || b) {
 	bot.editMessageText('1', opts,options);
 	} else{
 	bot.editMessageText(msg.text+'1', opts,options);
 	}
   }
   if (action === '11') {
-	if (msg.text=== '0' || msg.text=== a1.toString()) {
+	if (msg.text=== '0' || b) {
 	bot.editMessageText('2', opts,options);
 	} else{
 	bot.editMessageText(msg.text+'2', opts,options);
 	}
   }
   if (action === '12') {
-	if (msg.text=== '0' || msg.text=== a1.toString()) {
+	if (msg.text=== '0' || b) {
 	bot.editMessageText('3', opts,options);
 	} else{
 	bot.editMessageText(msg.text+'3', opts,options);
 	}
   }
   if (action === '14') {
-	if (msg.text=== '0' || msg.text=== a1.toString()) {
+	if (msg.text=== '0' || b) {
 	bot.editMessageText('0', opts,options);
 	} else{
 	bot.editMessageText(msg.text+'0', opts,options);
