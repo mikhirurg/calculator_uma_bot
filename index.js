@@ -2,9 +2,7 @@ var TelegramBot = require('node-telegram-bot-api'),
 
     bot = new TelegramBot("KEY", { polling: true });
 
-//telegram.on("text", (message) => {
-  //telegram.sendMessage(message.chat.id, "Hell world");
-//});
+
 var options = {
   reply_markup: JSON.stringify({
     inline_keyboard: [
@@ -44,6 +42,9 @@ const action = callbackQuery.data;
 
   if (action === '1') {
    bot.editMessageText('0', opts,options);
+   ch=' ';
+   b=false;
+   a1=0;
   }
   if (action === '2') {
 	ch='+';
@@ -73,7 +74,7 @@ const action = callbackQuery.data;
 	  }
   }
   if (action === '4') {
-	if (msg.text === '0' ) {
+	if (msg.text === '0' || b) {
 	bot.editMessageText('7', opts,options);
 	} else {
 	bot.editMessageText(msg.text+'7', opts,options);
