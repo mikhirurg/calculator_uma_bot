@@ -1,11 +1,16 @@
 {
-  "name": "calkulator_app_uma",
-  "description": "Sum in web",
+  "name": "mybot",
   "version": "1.0.0",
-  "engines": {
-    "node": "8.9.4"
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
-  "dependencies":{
-  "node-telegram-bot-api": "^0.3"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "node-telegram-bot-api": "^0.30.0"
   }
 }
